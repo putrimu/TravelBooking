@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUS BOOKING SYSTEM</title>
+    <title>City Travel Booking </title>
 	<!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FontAwesome Styles-->
@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Bus Booking</a>
+                <a class="navbar-brand" href="index.html">Travel Booking</a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -121,7 +121,7 @@
                   </div> 
                  <?php include("main.php");?>
                  <!-- /. ROW  -->
-				 <footer><strong><p><center>Bus Booking System. Developed By: Ronald. Brought To You by: <a href="http://code-projects.org/">code-projects</a></p></center></strong></footer>
+				 <footer><strong><p><center>City Travel Booking. For SI class </p></center></strong></footer>
 				</div>
              <!-- /. PAGE INNER  -->
             </div>
