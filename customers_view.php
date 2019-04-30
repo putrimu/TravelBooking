@@ -25,7 +25,7 @@
 		"`customers`.`id`" => "id",
 		"`customers`.`fullname`" => "fullname",
 		"`customers`.`phone`" => "phone",
-		"`customers`.`id_number`" => "id_number"
+		"`customers`.`id_number`" => "id_customer"
 	);
 	// mapping incoming sort by requests to actual query fields
 	$x->SortFields = array(   

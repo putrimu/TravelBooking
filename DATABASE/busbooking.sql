@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2018 at 09:01 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.0.29
+-- Generation Time: Apr 30, 2019 at 09:23 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -79,7 +79,8 @@ INSERT INTO `bookings` (`id`, `id_number`, `fullname`, `phone`, `bus`, `seat`, `
 (4, 1, 1, 1, 3, 9, 3, 3, '1', '3', NULL, NULL),
 (5, 2, 2, 2, 3, 1, 3, 3, NULL, '3', '2018-05-20', NULL),
 (6, 3, 3, 3, 3, 5, 3, 3, NULL, '3', '2018-05-20', NULL),
-(7, 2, 2, 2, 1, 10, 1, 1, NULL, '1', '2018-05-21', NULL);
+(7, 2, 2, 2, 1, 10, 1, 1, NULL, '1', '2018-05-21', NULL),
+(8, 4, 4, 4, 3, 3, 3, 3, NULL, '3', '2019-04-30', NULL);
 
 -- --------------------------------------------------------
 
@@ -120,7 +121,8 @@ CREATE TABLE `customers` (
 INSERT INTO `customers` (`id`, `fullname`, `phone`, `id_number`) VALUES
 (1, 'Davin Louis', '0712345678', '4410109291020'),
 (2, 'Kelvin Kevoh', '0792323200', '33767192'),
-(3, 'mukangara wenyagauri', '0734123453', '552211133445');
+(3, 'mukangara wenyagauri', '0734123453', '552211133445'),
+(4, 'putri mariah ulfa', '085861305756', 'putri_mu');
 
 -- --------------------------------------------------------
 
@@ -242,7 +244,9 @@ INSERT INTO `membership_userrecords` (`recID`, `tableName`, `pkValue`, `memberID
 (24, 'bookings', '5', 'kevoh', 1526824428, 1526824428, 3),
 (25, 'customers', '3', 'admin', 1526845211, 1526845211, 2),
 (26, 'bookings', '6', 'admin', 1526845238, 1526845238, 2),
-(27, 'bookings', '7', 'admin', 1526885955, 1526885955, 2);
+(27, 'bookings', '7', 'admin', 1526885955, 1526885955, 2),
+(28, 'customers', '4', 'putri_mu', 1556608686, 1556608812, 3),
+(29, 'bookings', '8', 'putri_mu', 1556608806, 1556608832, 3);
 
 -- --------------------------------------------------------
 
@@ -275,7 +279,8 @@ INSERT INTO `membership_users` (`memberID`, `passMD5`, `email`, `signupDate`, `g
 ('admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', '2018-05-20', 2, 0, 1, NULL, NULL, NULL, NULL, 'Admin member created automatically on 2018-05-20\nRecord updated automatically on 2018-05-20', NULL, NULL),
 ('guest', NULL, NULL, '2018-05-20', 1, 0, 1, NULL, NULL, NULL, NULL, 'Anonymous member created automatically on 2018-05-20', NULL, NULL),
 ('kaddy', '827ccb0eea8a706c4c34a16891f84e7b', 'kaddy@gmail.com', '2018-05-21', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL),
-('kevoh', '827ccb0eea8a706c4c34a16891f84e7b', 'kevo@gmail.com', '2018-05-20', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL);
+('kevoh', '827ccb0eea8a706c4c34a16891f84e7b', 'kevo@gmail.com', '2018-05-20', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL),
+('putri_mu', '2e95185823298a28672b5323436a9774', 'putri@gmail.com', '2019-04-30', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -420,7 +425,7 @@ ALTER TABLE `availability`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `buses`
@@ -432,7 +437,7 @@ ALTER TABLE `buses`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `membership_grouppermissions`
@@ -456,7 +461,7 @@ ALTER TABLE `membership_userpermissions`
 -- AUTO_INCREMENT for table `membership_userrecords`
 --
 ALTER TABLE `membership_userrecords`
-  MODIFY `recID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `recID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `routes`
