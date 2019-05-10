@@ -35,7 +35,7 @@ if(nn4||nn6) {
 		sl = "left"
 		st = "top"
 		ih = "clip.height"
-		iw = "clip.width"
+		iw = "clip.width" 
 		vl = "'show'"
 		hl = "'hide'"
 		sv = "visibility="
