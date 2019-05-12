@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2019 at 09:23 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Waktu pembuatan: 12 Bulan Mei 2019 pada 11.58
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `availability`
+-- Struktur dari tabel `availability`
 --
 
 CREATE TABLE `availability` (
@@ -39,18 +39,17 @@ CREATE TABLE `availability` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `availability`
+-- Dumping data untuk tabel `availability`
 --
 
 INSERT INTO `availability` (`id`, `bus`, `route`, `date`, `time`, `amount`, `status`) VALUES
 (1, 1, 1, '2018-05-20', '13:00:00', '1', 'available'),
-(2, 1, 2, '2018-05-22', '20:00:00', '2', 'not available'),
-(3, 2, 1, '2018-06-05', '13:00:00', '1', 'available');
+(3, 2, 1, '2019-06-05', '13:00:00', '1', 'available');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bookings`
+-- Struktur dari tabel `bookings`
 --
 
 CREATE TABLE `bookings` (
@@ -69,23 +68,17 @@ CREATE TABLE `bookings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `bookings`
+-- Dumping data untuk tabel `bookings`
 --
 
 INSERT INTO `bookings` (`id`, `id_number`, `fullname`, `phone`, `bus`, `seat`, `date`, `time`, `luggage`, `amount`, `date_booked`, `field11`) VALUES
-(1, 1, 1, 1, 2, 1, 2, 2, '1', '2', NULL, NULL),
-(2, 1, 1, 1, 1, 10, 1, 1, NULL, '1', NULL, NULL),
-(3, 1, 1, 1, 1, 5, 1, 1, NULL, '1', NULL, NULL),
-(4, 1, 1, 1, 3, 9, 3, 3, '1', '3', NULL, NULL),
-(5, 2, 2, 2, 3, 1, 3, 3, NULL, '3', '2018-05-20', NULL),
-(6, 3, 3, 3, 3, 5, 3, 3, NULL, '3', '2018-05-20', NULL),
-(7, 2, 2, 2, 1, 10, 1, 1, NULL, '1', '2018-05-21', NULL),
-(8, 4, 4, 4, 3, 3, 3, 3, NULL, '3', '2019-04-30', NULL);
+(8, 4, 4, 4, 3, 2, 3, 3, NULL, '3', '2019-05-12', NULL),
+(9, 5, 5, 5, 1, 5, 1, 1, '1', '1', '2019-05-12', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `buses`
+-- Struktur dari tabel `buses`
 --
 
 CREATE TABLE `buses` (
@@ -94,17 +87,17 @@ CREATE TABLE `buses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `buses`
+-- Dumping data untuk tabel `buses`
 --
 
 INSERT INTO `buses` (`id`, `number`) VALUES
-(1, 'KBX 1234'),
-(2, 'KBZ 8283');
+(1, 'Excecutive bus'),
+(2, 'Superior Bus');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Struktur dari tabel `customers`
 --
 
 CREATE TABLE `customers` (
@@ -115,19 +108,18 @@ CREATE TABLE `customers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `customers`
+-- Dumping data untuk tabel `customers`
 --
 
 INSERT INTO `customers` (`id`, `fullname`, `phone`, `id_number`) VALUES
 (1, 'Davin Louis', '0712345678', '4410109291020'),
-(2, 'Kelvin Kevoh', '0792323200', '33767192'),
-(3, 'mukangara wenyagauri', '0734123453', '552211133445'),
-(4, 'putri mariah ulfa', '085861305756', 'putri_mu');
+(4, 'kiara', '111111', 'kiara 1'),
+(5, 'rizki', '1234567890', 'rizki aditia');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `membership_grouppermissions`
+-- Struktur dari tabel `membership_grouppermissions`
 --
 
 CREATE TABLE `membership_grouppermissions` (
@@ -141,7 +133,7 @@ CREATE TABLE `membership_grouppermissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `membership_grouppermissions`
+-- Dumping data untuk tabel `membership_grouppermissions`
 --
 
 INSERT INTO `membership_grouppermissions` (`permissionID`, `groupID`, `tableName`, `allowInsert`, `allowView`, `allowEdit`, `allowDelete`) VALUES
@@ -161,7 +153,7 @@ INSERT INTO `membership_grouppermissions` (`permissionID`, `groupID`, `tableName
 -- --------------------------------------------------------
 
 --
--- Table structure for table `membership_groups`
+-- Struktur dari tabel `membership_groups`
 --
 
 CREATE TABLE `membership_groups` (
@@ -173,7 +165,7 @@ CREATE TABLE `membership_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `membership_groups`
+-- Dumping data untuk tabel `membership_groups`
 --
 
 INSERT INTO `membership_groups` (`groupID`, `name`, `description`, `allowSignup`, `needsApproval`) VALUES
@@ -184,7 +176,7 @@ INSERT INTO `membership_groups` (`groupID`, `name`, `description`, `allowSignup`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `membership_userpermissions`
+-- Struktur dari tabel `membership_userpermissions`
 --
 
 CREATE TABLE `membership_userpermissions` (
@@ -200,7 +192,7 @@ CREATE TABLE `membership_userpermissions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `membership_userrecords`
+-- Struktur dari tabel `membership_userrecords`
 --
 
 CREATE TABLE `membership_userrecords` (
@@ -214,11 +206,11 @@ CREATE TABLE `membership_userrecords` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `membership_userrecords`
+-- Dumping data untuk tabel `membership_userrecords`
 --
 
 INSERT INTO `membership_userrecords` (`recID`, `tableName`, `pkValue`, `memberID`, `dateAdded`, `dateUpdated`, `groupID`) VALUES
-(1, 'buses', '1', 'admin', 1526809520, 1526809520, 2),
+(1, 'buses', '1', 'admin', 1526809520, 1557638420, 2),
 (2, 'seats', '1', 'admin', 1526809541, 1526809541, 2),
 (3, 'seats', '2', 'admin', 1526809550, 1526809550, 2),
 (4, 'seats', '3', 'admin', 1526809559, 1526809559, 2),
@@ -229,29 +221,20 @@ INSERT INTO `membership_userrecords` (`recID`, `tableName`, `pkValue`, `memberID
 (9, 'seats', '8', 'admin', 1526809605, 1526809605, 2),
 (10, 'seats', '9', 'admin', 1526809615, 1526809615, 2),
 (11, 'seats', '10', 'admin', 1526809623, 1526809623, 2),
-(12, 'routes', '1', 'admin', 1526809669, 1526809669, 2),
-(13, 'routes', '2', 'admin', 1526809686, 1526809686, 2),
+(12, 'routes', '1', 'admin', 1526809669, 1557637394, 2),
 (14, 'availability', '1', 'admin', 1526809809, 1526810984, 2),
-(15, 'availability', '2', 'admin', 1526809852, 1526810962, 2),
 (16, 'customers', '1', 'admin', 1526810032, 1526810032, 2),
-(17, 'bookings', '1', 'admin', 1526810611, 1526810611, 2),
-(18, 'bookings', '2', 'admin', 1526812595, 1526812595, 2),
-(19, 'bookings', '3', 'admin', 1526812704, 1526812704, 2),
-(20, 'buses', '2', 'admin', 1526820828, 1526820828, 2),
-(21, 'availability', '3', 'admin', 1526820876, 1526820876, 2),
-(22, 'bookings', '4', 'admin', 1526820948, 1526820948, 2),
-(23, 'customers', '2', 'kevoh', 1526822459, 1526822459, 3),
-(24, 'bookings', '5', 'kevoh', 1526824428, 1526824428, 3),
-(25, 'customers', '3', 'admin', 1526845211, 1526845211, 2),
-(26, 'bookings', '6', 'admin', 1526845238, 1526845238, 2),
-(27, 'bookings', '7', 'admin', 1526885955, 1526885955, 2),
-(28, 'customers', '4', 'putri_mu', 1556608686, 1556608812, 3),
-(29, 'bookings', '8', 'putri_mu', 1556608806, 1556608832, 3);
+(20, 'buses', '2', 'admin', 1526820828, 1557638443, 2),
+(21, 'availability', '3', 'admin', 1526820876, 1557638461, 2),
+(28, 'customers', '4', 'putri', 1557636370, 1557636370, 3),
+(29, 'bookings', '8', 'admin', 1557637513, 1557637513, 2),
+(30, 'customers', '5', 'raka', 1557654983, 1557654983, 3),
+(31, 'bookings', '9', 'raka', 1557655015, 1557655015, 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `membership_users`
+-- Struktur dari tabel `membership_users`
 --
 
 CREATE TABLE `membership_users` (
@@ -272,20 +255,22 @@ CREATE TABLE `membership_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `membership_users`
+-- Dumping data untuk tabel `membership_users`
 --
 
 INSERT INTO `membership_users` (`memberID`, `passMD5`, `email`, `signupDate`, `groupID`, `isBanned`, `isApproved`, `custom1`, `custom2`, `custom3`, `custom4`, `comments`, `pass_reset_key`, `pass_reset_expiry`) VALUES
 ('admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', '2018-05-20', 2, 0, 1, NULL, NULL, NULL, NULL, 'Admin member created automatically on 2018-05-20\nRecord updated automatically on 2018-05-20', NULL, NULL),
 ('guest', NULL, NULL, '2018-05-20', 1, 0, 1, NULL, NULL, NULL, NULL, 'Anonymous member created automatically on 2018-05-20', NULL, NULL),
-('kaddy', '827ccb0eea8a706c4c34a16891f84e7b', 'kaddy@gmail.com', '2018-05-21', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL),
-('kevoh', '827ccb0eea8a706c4c34a16891f84e7b', 'kevo@gmail.com', '2018-05-20', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL),
-('putri_mu', '2e95185823298a28672b5323436a9774', 'putri@gmail.com', '2019-04-30', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL);
+('kaddy', '827ccb0eea8a706c4c34a16891f84e7b', 'kaddy@gmail.com', '2018-05-21', 3, 1, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL),
+('kevoh', '827ccb0eea8a706c4c34a16891f84e7b', 'kevo@gmail.com', '2018-05-20', 3, 1, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL),
+('putri', 'e807f1fcf82d132f9bb018ca6738a19f', 'uti@gmail.com', '2019-05-11', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL),
+('putrimu', '2e95185823298a28672b5323436a9774', 'putri@gmail.com', '2019-04-28', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL),
+('raka', 'c44a471bd78cc6c2fea32b9fe028d30a', 'raka@gmail.com', '2019-05-12', 3, 0, 1, '', '', '', '', 'member signed up through the registration form.', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `routes`
+-- Struktur dari tabel `routes`
 --
 
 CREATE TABLE `routes` (
@@ -296,17 +281,18 @@ CREATE TABLE `routes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `routes`
+-- Dumping data untuk tabel `routes`
 --
 
 INSERT INTO `routes` (`id`, `name`, `time`, `amount`) VALUES
-(1, 'Chavakali-Nairobi', 'day', '1000'),
-(2, 'Chavakali-Nairobi', 'night', '500');
+(1, 'bandung - Surabaya', 'day', '150000'),
+(2, 'bandung - Malang', 'day', '120000'),
+(3, 'Bandung - Solo', '17.00 - 02.00', '130000');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `seats`
+-- Struktur dari tabel `seats`
 --
 
 CREATE TABLE `seats` (
@@ -315,7 +301,7 @@ CREATE TABLE `seats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `seats`
+-- Dumping data untuk tabel `seats`
 --
 
 INSERT INTO `seats` (`id`, `name`) VALUES
@@ -335,7 +321,7 @@ INSERT INTO `seats` (`id`, `name`) VALUES
 --
 
 --
--- Indexes for table `availability`
+-- Indeks untuk tabel `availability`
 --
 ALTER TABLE `availability`
   ADD PRIMARY KEY (`id`),
@@ -343,7 +329,7 @@ ALTER TABLE `availability`
   ADD KEY `route` (`route`);
 
 --
--- Indexes for table `bookings`
+-- Indeks untuk tabel `bookings`
 --
 ALTER TABLE `bookings`
   ADD PRIMARY KEY (`id`),
@@ -352,37 +338,37 @@ ALTER TABLE `bookings`
   ADD KEY `seat` (`seat`);
 
 --
--- Indexes for table `buses`
+-- Indeks untuk tabel `buses`
 --
 ALTER TABLE `buses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `customers`
+-- Indeks untuk tabel `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `membership_grouppermissions`
+-- Indeks untuk tabel `membership_grouppermissions`
 --
 ALTER TABLE `membership_grouppermissions`
   ADD PRIMARY KEY (`permissionID`);
 
 --
--- Indexes for table `membership_groups`
+-- Indeks untuk tabel `membership_groups`
 --
 ALTER TABLE `membership_groups`
   ADD PRIMARY KEY (`groupID`);
 
 --
--- Indexes for table `membership_userpermissions`
+-- Indeks untuk tabel `membership_userpermissions`
 --
 ALTER TABLE `membership_userpermissions`
   ADD PRIMARY KEY (`permissionID`);
 
 --
--- Indexes for table `membership_userrecords`
+-- Indeks untuk tabel `membership_userrecords`
 --
 ALTER TABLE `membership_userrecords`
   ADD PRIMARY KEY (`recID`),
@@ -393,84 +379,84 @@ ALTER TABLE `membership_userrecords`
   ADD KEY `groupID` (`groupID`);
 
 --
--- Indexes for table `membership_users`
+-- Indeks untuk tabel `membership_users`
 --
 ALTER TABLE `membership_users`
   ADD PRIMARY KEY (`memberID`),
   ADD KEY `groupID` (`groupID`);
 
 --
--- Indexes for table `routes`
+-- Indeks untuk tabel `routes`
 --
 ALTER TABLE `routes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `seats`
+-- Indeks untuk tabel `seats`
 --
 ALTER TABLE `seats`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `availability`
+-- AUTO_INCREMENT untuk tabel `availability`
 --
 ALTER TABLE `availability`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `bookings`
+-- AUTO_INCREMENT untuk tabel `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `buses`
+-- AUTO_INCREMENT untuk tabel `buses`
 --
 ALTER TABLE `buses`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT untuk tabel `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `membership_grouppermissions`
+-- AUTO_INCREMENT untuk tabel `membership_grouppermissions`
 --
 ALTER TABLE `membership_grouppermissions`
   MODIFY `permissionID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `membership_groups`
+-- AUTO_INCREMENT untuk tabel `membership_groups`
 --
 ALTER TABLE `membership_groups`
   MODIFY `groupID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `membership_userpermissions`
+-- AUTO_INCREMENT untuk tabel `membership_userpermissions`
 --
 ALTER TABLE `membership_userpermissions`
   MODIFY `permissionID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `membership_userrecords`
+-- AUTO_INCREMENT untuk tabel `membership_userrecords`
 --
 ALTER TABLE `membership_userrecords`
-  MODIFY `recID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `recID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `routes`
+-- AUTO_INCREMENT untuk tabel `routes`
 --
 ALTER TABLE `routes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `seats`
+-- AUTO_INCREMENT untuk tabel `seats`
 --
 ALTER TABLE `seats`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
