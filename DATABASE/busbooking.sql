@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Bulan Mei 2019 pada 11.58
+-- Waktu pembuatan: 12 Bulan Mei 2019 pada 19.56
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.4
 
@@ -43,8 +43,9 @@ CREATE TABLE `availability` (
 --
 
 INSERT INTO `availability` (`id`, `bus`, `route`, `date`, `time`, `amount`, `status`) VALUES
-(1, 1, 1, '2018-05-20', '13:00:00', '1', 'available'),
-(3, 2, 1, '2019-06-05', '13:00:00', '1', 'available');
+(1, 1, 1, '2018-05-20', '03:00:00', '1', 'available'),
+(3, 2, 5, '2019-06-05', '23:00:00', '1', 'available'),
+(4, 4, 4, '2019-05-16', '16:00:00', '4', NULL);
 
 -- --------------------------------------------------------
 
@@ -91,8 +92,10 @@ CREATE TABLE `buses` (
 --
 
 INSERT INTO `buses` (`id`, `number`) VALUES
-(1, 'Excecutive bus'),
-(2, 'Superior Bus');
+(1, 'AKJ Exsekutif'),
+(2, 'ABC Superior'),
+(3, 'ATC Ekonomi AC'),
+(4, 'AAK Bisnis');
 
 -- --------------------------------------------------------
 
@@ -285,9 +288,12 @@ CREATE TABLE `routes` (
 --
 
 INSERT INTO `routes` (`id`, `name`, `time`, `amount`) VALUES
-(1, 'bandung - Surabaya', 'day', '150000'),
-(2, 'bandung - Malang', 'day', '120000'),
-(3, 'Bandung - Solo', '17.00 - 02.00', '130000');
+(1, 'bandung - Surabaya', '03.00 - 12.00', '150000'),
+(2, 'bandung - Malang', '07.00 - 14.00', '120000'),
+(3, 'Bandung - Solo', '17.00 - 02.00', '130000'),
+(4, 'malang - bandung', '16.00 - 23.00', '120000'),
+(5, 'Surabaya - Bandung', '23.00 - 08.00', '150000'),
+(6, 'Solo - Bandung', '19.00 - 04.00', '130000');
 
 -- --------------------------------------------------------
 
@@ -405,7 +411,7 @@ ALTER TABLE `seats`
 -- AUTO_INCREMENT untuk tabel `availability`
 --
 ALTER TABLE `availability`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `bookings`
@@ -417,7 +423,7 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT untuk tabel `buses`
 --
 ALTER TABLE `buses`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `customers`
@@ -453,7 +459,7 @@ ALTER TABLE `membership_userrecords`
 -- AUTO_INCREMENT untuk tabel `routes`
 --
 ALTER TABLE `routes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `seats`
