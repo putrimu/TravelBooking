@@ -7,6 +7,9 @@
 
 <div class="row">
 	<div class="col-sm-6 col-lg-8" id="login_splash">
+		<div class="row">
+			<img src="images/3.jpg" alt="Travel" width="85%">
+		</div>
 		<!-- customized splash content here -->
 	</div>
 	<div class="col-sm-6 col-lg-4">

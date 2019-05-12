@@ -102,6 +102,9 @@
 <?php if(!$noSignup){ ?>
 	<div class="row">
 		<div class="hidden-xs col-sm-4 col-md-6 col-lg-8" id="signup_splash">
+			<div class="row">
+				<img src="images/3.jpg" alt="Travel" width="85%">
+			</div>
 			<!-- customized splash content here -->
 		</div>
 
